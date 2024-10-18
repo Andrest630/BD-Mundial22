@@ -942,7 +942,7 @@ START TRANSACTION ;
     CALL altaPartido (@idFranciaDinamarcaGrupo, 1, 2, 12, 7, '2022-11-26 13:00', 2, 1, 90);
     CALL altaPartido (@idTunezFranciaGrupo, 1, 31, 2, 2, '2022-11-30 12:00', 1, 0, 90);
     CALL altaPartido (@idFranciaPolonia8, 2, 2, 25, 6, '2022-12-4 12:00', 3, 1, 90);
-    CALL altaPartido (@idPortugalGanaGrupo, 1, 26, 17, 7, '2022-11-24 13:00', 3, 2, 90);
+    CALL altaPartido (@idPortugalGhanaGrupo, 1, 26, 17, 7, '2022-11-24 13:00', 3, 2, 90);
 
     INSERT INTO JugadorPartido (idJugador, idPartido, idReemplazo, ingreso, ingresoAdicionado, egreso, egresoAdicionado)
         VALUES              -- Partido Argentina - Arabia Saudita - Grupo C
@@ -1148,7 +1148,12 @@ START TRANSACTION ;
                         (idJugador(2,3),    @idFranciaPolonia8, idJugador(2, 5),    90,     2,      NULL ,  NULL),
                         (idJugador(2,13),   @idFranciaPolonia8, idJugador(2, 8),    66,     NULL,   NULL ,  NULL),
                         (idJugador(2,20),   @idFranciaPolonia8, idJugador(2, 11),   76,     NULL,   NULL ,  NULL),
-                        (idJugador(2,26),   @idFranciaPolonia8, idJugador(2, 9),    76,     NULL,   NULL ,  NULL)
+                        (idJugador(2,26),   @idFranciaPolonia8, idJugador(2, 9),    76,     NULL,   NULL ,  NULL),
+                                                -- Partido Portugal - Ghana - Grupo
+                        (idJugador(26, 22), @idPortugalGhanaGrupo, NULL,    NULL,   NULL,   NULL,   NULL),
+                        (idJugador(26, 4), @idPortugalGhanaGrupo, NULL,    NULL,   NULL,   NULL,   NULL),
+                        (idJugador(26, 5), @idPortugalGhanaGrupo, NULL,    NULL,   NULL,   NULL,   NULL)
+
     ;
 
     INSERT INTO Gol (idJugador, idPartido, minuto, adicionado, enContra)        
